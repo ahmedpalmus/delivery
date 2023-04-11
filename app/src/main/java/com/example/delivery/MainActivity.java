@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, getResources().getString(R.string.loginError), Toast.LENGTH_LONG).show();
             }
+        }else if (v.getId() == R.id.log_reg) {
+            Intent intent = new Intent(MainActivity.this, Register.class);
+            startActivity(intent);
         }
     }
 
@@ -87,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, StaffPage.class);
                     intent.putExtra("id", username);
                     startActivity(intent);
-                } else if (result.equalsIgnoreCase("agent")) {
+                } else if (result.equalsIgnoreCase("Delivery Agent")) {
                     Intent intent = new Intent(MainActivity.this, AgentPage.class);
                     intent.putExtra("id", username);
                     startActivity(intent);
