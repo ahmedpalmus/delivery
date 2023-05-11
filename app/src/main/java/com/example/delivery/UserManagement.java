@@ -11,7 +11,6 @@ public class UserManagement extends AppCompatActivity {
     String username,user_type;
     Button add,update,del;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,15 +37,18 @@ public class UserManagement extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(UserManagement.this, UsersList.class);
                 intent.putExtra("op_type","del");
+                intent.putExtra("user_type",user_type);
                 startActivity(intent);
             }
         });
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserManagement.this, UsersList.class);
+                /*Intent intent = new Intent(UserManagement.this, UsersList.class);
                 intent.putExtra("op_type","update");
-                startActivity(intent);
+                intent.putExtra("user_type",user_type);
+
+                startActivity(intent);*/
             }
         });
 

@@ -29,7 +29,7 @@ public class UsersList extends AppCompatActivity {
     private final String URL = Server.ip + "getallusers.php";
     private final String URL2 = Server.ip + "deluser.php";
     public ArrayList<UserProfile> memos;
-    String user_id, op_type;
+    String user_id, user_type,op_type;
     ListView simpleList;
     ArrayAdapter<String> adapter;
 
@@ -38,7 +38,7 @@ public class UsersList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users_list);
         op_type = getIntent().getStringExtra("op_type");
-
+        user_type=getIntent().getStringExtra("user_type");
         simpleList = findViewById(R.id.memo_list);
         memos = new ArrayList<>();
 
@@ -65,6 +65,7 @@ public class UsersList extends AppCompatActivity {
                 Connection con = new Connection();
                 HashMap<String, String> data = new HashMap<>();
                 data.put("user_id", user_id);
+                data.put("user_type", user_type);
 
                 String result = con.sendPostRequest(URL2, data);
                 return result;
@@ -101,7 +102,7 @@ public class UsersList extends AppCompatActivity {
             protected String doInBackground(String... params) {
                 Connection con = new Connection();
                 HashMap<String, String> data = new HashMap<>();
-                data.put("id", "username");
+                data.put("user_type", user_type);
 
                 String result = con.sendPostRequest(URL, data);
                 return result.trim();

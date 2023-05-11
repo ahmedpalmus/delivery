@@ -24,7 +24,7 @@ public class AddUser extends AppCompatActivity {
 
     String user, password, name, thePhone, Email,type;
     String URL = Server.ip + "adduser.php";
-    Button reg, cancel;
+    Button reg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,12 +54,6 @@ public class AddUser extends AppCompatActivity {
             }
         });
 
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
     }
 
     public void RegOnclick(View view) {

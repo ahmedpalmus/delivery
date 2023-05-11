@@ -79,7 +79,8 @@ public class MenuList extends AppCompatActivity {
             protected String doInBackground(String... params) {
                 Connection con = new Connection();
                 HashMap<String, String> data = new HashMap<>();
-                data.put("type", "usertype");
+                data.put("username", username);
+                data.put("type", type);
 
                 String result = con.sendPostRequest(URL, data);
                 return result;

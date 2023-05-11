@@ -37,7 +37,7 @@
                 android:paddingHorizontal="20dp">
 
                 <Button
-                    android:id="@+id/cafeteria"
+                    android:id="@+id/staff"
                     android:layout_marginHorizontal="5dp"
                     android:padding="10dp"
                     android:layout_gravity="center"
@@ -62,7 +62,7 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="20dp">
                 <Button
-                    android:id="@+id/library"
+                    android:id="@+id/agents"
                     android:layout_marginHorizontal="5dp"
                     android:padding="10dp"
                     android:layout_gravity="center"

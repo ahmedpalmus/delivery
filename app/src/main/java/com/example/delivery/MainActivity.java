@@ -90,8 +90,12 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, StaffPage.class);
                     intent.putExtra("id", username);
                     startActivity(intent);
-                } else if (result.equalsIgnoreCase("Delivery Agent")) {
+                } else if (result.equalsIgnoreCase("delivery agent")) {
                     Intent intent = new Intent(MainActivity.this, AgentPage.class);
+                    intent.putExtra("id", username);
+                    startActivity(intent);
+                }else if (result.equalsIgnoreCase("admin")) {
+                    Intent intent = new Intent(MainActivity.this, AdminPage.class);
                     intent.putExtra("id", username);
                     startActivity(intent);
                 }
