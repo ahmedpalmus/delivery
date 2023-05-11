@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    android:layout_margin="1dp"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/box_6">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/users"
+            />
+        <TextView
+            android:id="@+id/item_n"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ibrahim Saeed\nStudent"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textColor="#fff"
+            android:paddingLeft="20dp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuList"
+    android:orientation="vertical"
+    android:background="@drawable/box_2"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_margin="2dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textSize="23sp"
+            android:text="Wecome Back"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="#C8215A"
+            android:fontFamily="@font/timesbi"/>
+        <ImageButton
+            android:id="@+id/new_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_fiber_new_24"
+            android:background="@drawable/box_3"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/menu_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear14" />
+
+</LinearLayout>

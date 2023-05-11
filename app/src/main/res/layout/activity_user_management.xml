@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserManagement"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="23sp"
+        android:text="Wecome Back"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="#C8215A"
+        android:drawableRight="@drawable/staff"
+        android:fontFamily="@font/timesbi"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/gradient_light"
+        >
+
+        <Button
+            android:id="@+id/add"
+            android:layout_marginHorizontal="5dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:drawablePadding="5dp"
+            android:text="Add"
+            android:fontFamily="@font/timesbd"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/box_1"
+            android:textAlignment="center"
+            />
+        <Button
+            android:id="@+id/update"
+            android:layout_marginHorizontal="5dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:textSize="18sp"
+            android:fontFamily="@font/timesbd"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/box_4"
+            android:textAlignment="center"
+            />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_marginHorizontal="5dp"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textSize="18sp"
+            android:fontFamily="@font/timesbd"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/box_5"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
