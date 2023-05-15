@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             username = user.getText().toString().trim();
             pass = password.getText().toString().trim();
             type = types.getSelectedItem().toString().toLowerCase();
-            if (username.length() > 3) {
+            if (username.length() > 2) {
                 login();
             } else {
                 Toast.makeText(this, getResources().getString(R.string.loginError), Toast.LENGTH_LONG).show();

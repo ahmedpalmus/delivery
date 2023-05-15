@@ -43,7 +43,7 @@
                 android:textSize="22dp"
                 android:textStyle="bold"
                 android:drawableLeft="@drawable/ic_baseline_restaurant_menu_24"
-                android:text="Food drinks"/>
+                android:text="Cold drinks"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -93,8 +93,36 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:textColor="#353535"
-                    android:textSize="18dp"
-                    android:text="The description"/>
+                    android:textSize="18dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/lin1"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/gradient_light"
+                        android:padding="5dp"
+                        android:text="Quantity"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/item_q"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:textColor="#000"
+                        android:inputType="number"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

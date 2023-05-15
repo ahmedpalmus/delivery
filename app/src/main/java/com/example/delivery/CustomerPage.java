@@ -42,7 +42,10 @@ public class CustomerPage extends AppCompatActivity {
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(CustomerPage.this,OrderList.class);
+                intent.putExtra("id",id);
+                intent.putExtra("type","customer");
+                startActivity(intent);
             }
         });
         payments.setOnClickListener(new View.OnClickListener() {

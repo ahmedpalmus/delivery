@@ -130,6 +130,7 @@ public class MenuList extends AppCompatActivity {
                                 Intent intent = new Intent(MenuList.this, ProductDetails.class);
                                 intent.putExtra("item", records.get(position));
                                 intent.putExtra("type", type);
+                                intent.putExtra("id", username);
                                 startActivity(intent);
                             }
                         });

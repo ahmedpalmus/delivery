@@ -1,4 +1,7 @@
 <resources>
+     <string name="map_key" translatable="false">
+        AIzaSyDmFVuBPCTN6Ytyvbbr7Qfic0oaeodclFc
+    </string>
     <string name="app_name">Delivery</string>
     <string name="logo">Student Snacks</string>
     <string name="username">Username</string>

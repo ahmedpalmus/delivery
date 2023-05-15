@@ -35,7 +35,7 @@ public class StaffPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(StaffPage.this, Profile.class);
                 intent.putExtra("id", id);
-                intent.putExtra("type", "admin");
+                intent.putExtra("type", "staff");
 
                 startActivity(intent);
             }
@@ -43,7 +43,10 @@ public class StaffPage extends AppCompatActivity {
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(StaffPage.this,OrderList.class);
+                intent.putExtra("id",id);
+                intent.putExtra("type","staff");
+                startActivity(intent);
             }
         });
         payments.setOnClickListener(new View.OnClickListener() {
