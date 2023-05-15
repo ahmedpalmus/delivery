@@ -128,6 +128,8 @@ public class ProductDetails extends AppCompatActivity {
                 // Called when a new location is found by the network location provider.
                 lat = "" + location.getLatitude();
                 lon = "" + location.getLongitude();
+                lat="18.107809438262883";
+                lon="43.1144998134949";
                 return;
             }
 
