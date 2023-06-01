@@ -33,10 +33,10 @@ public class CustomerPage extends AppCompatActivity {
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(CustomerPage.this, Profile.class);
-//                intent.putExtra("id", id);
-//
-//                startActivity(intent);
+                Intent intent = new Intent(CustomerPage.this, Profile.class);
+                intent.putExtra("id", id);
+                intent.putExtra("type","customer");
+                startActivity(intent);
             }
         });
         orders.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +51,10 @@ public class CustomerPage extends AppCompatActivity {
         payments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(CustomerPage.this,PaymentList.class);
+                intent.putExtra("id",id);
+                intent.putExtra("type","customer");
+                startActivity(intent);
             }
         });
 

@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,7 +38,7 @@ public class ProductDetails extends AppCompatActivity {
     Product Info;
     TextView title, price, detail;
     ImageView imageView;
-    EditText quan;
+    Spinner quan;
     Button edit, order;
     String username, type, quantity;
     String URL = Server.ip + "sendorder.php";
@@ -79,6 +80,7 @@ public class ProductDetails extends AppCompatActivity {
                 Intent intent = new Intent(ProductDetails.this, AddProduct.class);
                 intent.putExtra("op_type", "edit");
                 intent.putExtra("info", Info);
+                intent.putExtra("id", username);
                 startActivity(intent);
                 finish();
             }
@@ -86,7 +88,7 @@ public class ProductDetails extends AppCompatActivity {
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                quantity = quan.getText().toString();
+                quantity = quan.getSelectedItem().toString();
                 if (isInteger(quantity)) {
                     checkPermission();
                 } else {
@@ -122,14 +124,15 @@ public class ProductDetails extends AppCompatActivity {
     }
 
     private void getLocation() {
+        lat="18.107809438262883";
+        lon="43.1144998134949";
         // Define a LocationListener
         LocationListener locationListener = new LocationListener() {
             public void onLocationChanged(Location location) {
                 // Called when a new location is found by the network location provider.
                 lat = "" + location.getLatitude();
                 lon = "" + location.getLongitude();
-                lat="18.107809438262883";
-                lon="43.1144998134949";
+
                 return;
             }
 

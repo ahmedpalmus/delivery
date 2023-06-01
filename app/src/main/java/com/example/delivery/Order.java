@@ -4,7 +4,15 @@ import java.io.Serializable;
 
 public class Order implements Serializable {
 
-    private String order_id,fullname, customer_id, time, total_price, lat, lon, status;
+    private String order_id,fullname, customer_id, time, total_price, lat, lon, status,deliver_date;
+
+    public String getDeliver_date() {
+        return deliver_date;
+    }
+
+    public void setDeliver_date(String deliver_date) {
+        this.deliver_date = deliver_date;
+    }
 
     public String getOrder_id() {
         return order_id;

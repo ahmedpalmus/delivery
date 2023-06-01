@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:textSize="23sp"
-                android:text="Wecome Back"
+                android:text="@string/welcome_back"
                 android:textStyle="bold"
                 android:textAlignment="textStart"
                 android:textColor="#C8215A"
@@ -44,7 +44,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="View Orders"
+                    android:text="@string/view_orders"
                     android:textSize="22sp"
                     android:fontFamily="@font/timesbi"
                     android:drawableLeft="@drawable/orders"
@@ -63,14 +63,14 @@
                 android:paddingHorizontal="20dp">
 
                 <Button
-                    android:id="@+id/books"
+                    android:id="@+id/history"
                     android:layout_marginHorizontal="5dp"
                     android:padding="10dp"
                     android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="Delivery History"
+                    android:text="@string/delivery_history"
                     android:textAlignment="center"
                     android:textSize="22sp"
                     android:fontFamily="@font/timesbi"
@@ -80,7 +80,6 @@
                     android:textAllCaps="false"
                     android:background="@drawable/box_3"
                     />
-
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,7 +95,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="My Profile"
+                    android:text="@string/profile"
                     android:textAlignment="center"
                     android:textSize="22sp"
                     android:fontFamily="@font/timesbi"

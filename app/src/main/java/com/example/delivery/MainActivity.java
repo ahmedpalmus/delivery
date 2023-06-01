@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     String username, pass, type;
     Spinner types;
     String URL = Server.ip + "login.php";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

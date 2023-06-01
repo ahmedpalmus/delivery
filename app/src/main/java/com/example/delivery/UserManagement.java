@@ -44,11 +44,11 @@ public class UserManagement extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent intent = new Intent(UserManagement.this, UsersList.class);
+                Intent intent = new Intent(UserManagement.this, UsersList.class);
                 intent.putExtra("op_type","update");
                 intent.putExtra("user_type",user_type);
 
-                startActivity(intent);*/
+                startActivity(intent);
             }
         });
 

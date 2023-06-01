@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderDetails"
+    tools:context=".PaymentDetails"
     android:orientation="vertical"
     android:background="@drawable/box_2"
 
@@ -21,9 +21,10 @@
             android:layout_height="match_parent"
             android:padding="10dp"
             android:textSize="23sp"
-            android:text="@string/the_order_details"
+            android:text="@string/the_delivered_order_details"
             android:textStyle="bold"
             android:textAlignment="textStart"
+            android:drawableRight="@drawable/payment"
             android:textColor="#C8215A"
             android:fontFamily="@font/timesbi"/>
 
@@ -62,6 +63,7 @@
                     android:layout_weight="2"
                     android:padding="10dp"
                     android:textColor="#000"
+
                     android:textSize="18dp" />
             </LinearLayout>
 
@@ -90,6 +92,33 @@
                     android:textSize="18dp"
                     android:text="30/06/2023 16:44"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/deliver_time"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/del_date"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="#393838"
+                    android:textSize="18dp"
+                    android:text="30/06/2023 16:44"/>
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -115,44 +144,7 @@
                     android:textSize="18dp"
                     />
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                >
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="@string/status"
-                    android:textSize="18dp"
-                    android:textColor="#000"
-                    android:textStyle="bold"
-                    android:padding="5dp"/>
-                <TextView
-                    android:id="@+id/or_status"
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:textColor="#046E09"
-                    android:textSize="18dp"/>
-            </LinearLayout>
 
-            <Button
-                android:id="@+id/prof_map"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/view_location"
-                android:padding="5dp"
-                android:textStyle="bold"
-                android:textColor="#000"
-                android:textSize="18dp"
-                android:background="@drawable/gradient_light"
-                android:drawableLeft="@drawable/map"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -200,82 +192,6 @@
                 </TableRow>
 
             </TableLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/prof_start"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/start_preparing"
-                    android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"
-                    android:textSize="18dp"
-                    android:background="@drawable/box_4"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    />
-                <Button
-                    android:id="@+id/prof_ready"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/order_is_ready"
-                    android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"
-                    android:textSize="18dp"
-                    android:background="@drawable/box_6"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    />
-                <Button
-                    android:id="@+id/prof_startd"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/start_delivery"
-                    android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"
-                    android:textSize="18dp"
-                    android:background="@drawable/box_4"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    />
-                <Button
-                    android:id="@+id/prof_delivered"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/delivered"
-                    android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"
-                    android:textSize="18dp"
-                    android:background="@drawable/box_6"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    />
-                <Button
-                    android:id="@+id/prof_cancel"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/cancel_order"
-                    android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"
-                    android:textSize="18dp"
-                    android:background="@drawable/box_7"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    />
-            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>

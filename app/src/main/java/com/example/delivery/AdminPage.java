@@ -44,7 +44,7 @@ public class AdminPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(AdminPage.this, UserManagement.class);
                 intent.putExtra("id", id);
-                intent.putExtra("user_type", "agent");
+                intent.putExtra("user_type", "delivery_agent");
 
                 startActivity(intent);
             }

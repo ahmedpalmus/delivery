@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderList"
+    tools:context=".PaymentList"
     android:orientation="vertical"
     >
     <LinearLayout
@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:padding="10dp"
             android:textSize="23sp"
-            android:text="@string/the_current_orders"
+            android:text="@string/delivered_orders"
             android:textStyle="bold"
             android:textAlignment="textStart"
             android:textColor="#C8215A"

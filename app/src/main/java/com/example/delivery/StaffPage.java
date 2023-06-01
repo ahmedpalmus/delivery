@@ -52,7 +52,10 @@ public class StaffPage extends AppCompatActivity {
         payments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(StaffPage.this,PaymentList.class);
+                intent.putExtra("id",id);
+                intent.putExtra("type","staff");
+                startActivity(intent);
             }
         });
 

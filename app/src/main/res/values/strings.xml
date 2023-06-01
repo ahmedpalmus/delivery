@@ -64,14 +64,56 @@
     <string name="job">Job</string>
     <string name="age">Age</string>
     <string name="gender">Gender</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="new_product_details">New Product details</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="select_image">Select Image</string>
+    <string name="creating_a_new_account">Creating a new account</string>
+    <string name="create_account">Create account</string>
+    <string name="staff">Staff</string>
+    <string name="delivery_agents">Delivery Agents</string>
+    <string name="view_orders">View Orders</string>
+    <string name="delivery_history">Delivery History</string>
+    <string name="the_menu">The Menu</string>
+    <string name="my_orders">My Orders</string>
+    <string name="my_payments">My Payments</string>
+    <string name="the_order_details">The Order Details</string>
+    <string name="customer">Customer</string>
+    <string name="order_time">Order Time</string>
+    <string name="total_price">Total Price</string>
+    <string name="status">Status</string>
+    <string name="view_location">View Location</string>
+    <string name="added_items">Added Items</string>
+    <string name="start_preparing">Start Preparing</string>
+    <string name="order_is_ready">Order is Ready</string>
+    <string name="start_delivery">Start Delivery</string>
+    <string name="delivered">Delivered</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="the_current_orders">The Current Orders</string>
+    <string name="the_delivered_order_details">The Delivered order Details</string>
+    <string name="deliver_time">Deliver Time</string>
+    <string name="delivered_orders">Delivered Orders</string>
+    <string name="quantity">Quantity</string>
+    <string name="order">Order</string>
+    <string name="menu_management">Menu Management</string>
+    <string name="payments">Payments</string>
+    <string name="add_user">Add User</string>
+    <string name="update_user">Update User</string>
+    <string name="delete_user">Delete User</string>
 
 
     <string-array name="rating" translatable="false">
-        <item>5</item>
-        <item>4</item>
-        <item>3</item>
-        <item>2</item>
         <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
     </string-array>
 
     <string-array name="users" translatable="false">

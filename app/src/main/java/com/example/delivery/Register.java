@@ -36,15 +36,12 @@ public class Register extends AppCompatActivity {
         perName = findViewById(R.id.reg_name);
         phone = findViewById(R.id.reg_phone);
         email = findViewById(R.id.reg_email);
-
-
         l1 = findViewById(R.id.l1);
         l2 = findViewById(R.id.l2);
         l3 = findViewById(R.id.l3);
         l4 = findViewById(R.id.l4);
         l6 = findViewById(R.id.l6);
         l7 = findViewById(R.id.l7);
-
 
         reg = findViewById(R.id.reg_reg);
         reg.setOnClickListener(new View.OnClickListener() {

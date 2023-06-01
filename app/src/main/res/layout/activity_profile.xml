@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textSize="23sp"
-        android:text="Wecome Back"
+        android:text="Welcome Back"
         android:textStyle="bold"
         android:textAlignment="textStart"
         android:textColor="#C8215A"

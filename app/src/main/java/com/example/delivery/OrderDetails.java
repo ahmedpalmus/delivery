@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -75,13 +76,13 @@ public class OrderDetails extends AppCompatActivity {
         tableLayout = findViewById(R.id.items_table);
 
         if (type.equals("staff") ) {
-            if(Info.getStatus()=="New order") {
+            if(Info.getStatus().equals("New order")) {
                 prepare.setVisibility(View.VISIBLE);
                 ready.setVisibility(View.GONE);
                 start_deliver.setVisibility(View.GONE);
                 delivered.setVisibility(View.GONE);
                 cancel.setVisibility(View.GONE);
-            }if(Info.getStatus()=="Working on it...") {
+            }else if(Info.getStatus().equals("Working on it...")) {
                 prepare.setVisibility(View.GONE);
                 ready.setVisibility(View.VISIBLE);
                 start_deliver.setVisibility(View.GONE);
@@ -95,13 +96,13 @@ public class OrderDetails extends AppCompatActivity {
                 cancel.setVisibility(View.GONE);
             }
         }else  if (type.equals("delivery agent") ) {
-            if(Info.getStatus()=="Ready") {
+            if(Info.getStatus().equals("Ready")) {
                 prepare.setVisibility(View.GONE);
                 ready.setVisibility(View.GONE);
                 start_deliver.setVisibility(View.VISIBLE);
                 delivered.setVisibility(View.GONE);
                 cancel.setVisibility(View.GONE);
-            }if(Info.getStatus()=="On the way...") {
+            }else if(Info.getStatus().equals("On the way...")) {
                 prepare.setVisibility(View.GONE);
                 ready.setVisibility(View.GONE);
                 start_deliver.setVisibility(View.GONE);
@@ -115,7 +116,7 @@ public class OrderDetails extends AppCompatActivity {
                 cancel.setVisibility(View.GONE);
             }
         }else  if (type.equals("customer") ) {
-            if(Info.getStatus()=="New order") {
+            if(Info.getStatus().equals("New order")) {
                 prepare.setVisibility(View.GONE);
                 ready.setVisibility(View.GONE);
                 start_deliver.setVisibility(View.GONE);
@@ -168,7 +169,6 @@ public class OrderDetails extends AppCompatActivity {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 OpenMap(Info.getLat(),Info.getLon());
             }
         });
@@ -199,7 +199,7 @@ getInfos();
                 data.put("status", action);
 
                 String result = con.sendPostRequest(URL, data);
-                return result;
+                return result.trim();
             }
 
             @Override
@@ -254,13 +254,10 @@ getInfos();
                         JSONArray allReq = new JSONArray(result);
                         for (int i = 0; i < allReq.length(); i++) {
                             JSONObject row = allReq.getJSONObject(i);
-
                             OrderItem temp=new OrderItem();
                             temp.setTitle(row.getString("title"));
                             temp.setQuantity(row.getString("quantity"));
                             temp.setPrice(row.getString("price"));
-
-
                             records.add(temp);
 
                         }
@@ -287,6 +284,33 @@ getInfos();
     }
     public void SetItems() {
         tableLayout.removeAllViews();
+        TableRow tableRow1 = new TableRow(OrderDetails.this);
+        tableRow1.setBackgroundColor(Color.CYAN);
+
+// create two text views
+        TextView textView11 = new TextView(OrderDetails.this);
+        textView11.setText("Title");
+        textView11.setPadding(20, 20, 20, 20);
+        float textSize = 18;
+        textView11.setTextSize(textSize);
+
+        TextView textView12 = new TextView(OrderDetails.this);
+        textView12.setText("Price");
+        textView12.setPadding(20, 20, 20, 20);
+        textView12.setTextSize(textSize);
+
+        TextView textView13 = new TextView(OrderDetails.this);
+        textView13.setText("Quantity");
+        textView13.setPadding(20, 20, 20, 20);
+        textView13.setTextSize(textSize);
+
+// add the text views to the table row
+        tableRow1.addView(textView11);
+        tableRow1.addView(textView12);
+        tableRow1.addView(textView13);
+
+// add the table row to the table layout
+        tableLayout.addView(tableRow1);
         for (int j = 0; j < records.size(); j++) {
 
             TableRow tableRow = new TableRow(OrderDetails.this);
@@ -295,7 +319,6 @@ getInfos();
             TextView textView1 = new TextView(OrderDetails.this);
             textView1.setText(records.get(j).getTitle());
             textView1.setPadding(20, 20, 20, 20);
-            float textSize = 18;
             textView1.setTextSize(textSize);
 
             TextView textView2 = new TextView(OrderDetails.this);
@@ -328,19 +351,6 @@ getInfos();
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
         intent.setPackage("com.google.android.apps.maps");
         startActivity(intent);
-   /* // Create a Uri object with the coordinates and marker
-    Uri gmmIntentUri = Uri.parse("geo:" + latitude + "," + longitude + "?q=" + latitude + "," + longitude + "(Customer Location)");
 
-    // Create an Intent with the action and Uri
-    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-
-    // Set the package to the Google Maps app
-    mapIntent.setPackage("com.google.android.apps.maps");
-
-    // Verify if there is an app available to handle the Intent
-    if (mapIntent.resolveActivity(getPackageManager()) != null) {
-        // Start the activity
-        startActivity(mapIntent);
-    }*/
 }
 }
